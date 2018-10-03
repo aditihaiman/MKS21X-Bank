@@ -25,4 +25,13 @@ public class BankAccount{
 			return true;
 		}
 	}
+	public String getPassword(BankAccount acc) {
+		return password;
+	}
+	public String getBalance(BankAccount acc) {
+		return balance;
+	}
+	public String getID(BankAccount acc) {
+		return accountID;
+	}
 }
