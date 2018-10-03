@@ -2,7 +2,7 @@ public class BankAccount{
 	private double balance;
 	private int accountID;
 	private String password;
-	
+
 	public BankAccount(double newBalance, int newID, String newPass){
 		balance = newBalance;
 		accountID = newID;
@@ -12,7 +12,7 @@ public class BankAccount{
 		return accountID + "\t" + balance;
 	}
 	public boolean deposit(double amount) {
-		if (amount >= 0){			
+		if (amount >= 0){
 			balance += amount;
 			return true;
 		}
@@ -25,13 +25,13 @@ public class BankAccount{
 			return true;
 		}
 	}
-	public String getPassword(BankAccount acc) {
+	public String getPassword() {
 		return password;
 	}
-	public String getBalance(BankAccount acc) {
+	public double getBalance() {
 		return balance;
 	}
-	public String getID(BankAccount acc) {
+	public int getID() {
 		return accountID;
 	}
 }
