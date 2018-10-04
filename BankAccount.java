@@ -9,7 +9,7 @@ public class BankAccount{
 		password = newPass;
 	}
 	public String toString() {
-		return accountID + "\t" + balance;
+		return accountID + ", \t" + balance;
 	}
 	public void setPassword(String newPass) {
 		password = newPass;
@@ -34,5 +34,16 @@ public class BankAccount{
 	}
 	public int getID() {
 		return accountID;
+	}
+	private boolean authenticate(String pass) {
+		return this.password == pass;
+	}
+	public boolean transferTo(BankAccount other, double amount, String pass) {
+		if (this.authenticate(pass)) {
+			if (this.withdraw(amount) && other.deposit(amount)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
