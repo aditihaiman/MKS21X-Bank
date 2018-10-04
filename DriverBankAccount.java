@@ -33,5 +33,11 @@ public class DriverBankAccount{
       System.out.println();
       cashAmount *= 2;
     }
+
+    if (b1.transferTo(b2, 50.0, "abc123")) {
+      System.out.println("Transfer successful");
+      System.out.println(b1);
+      System.out.println(b2);
+    }
   }
 }
